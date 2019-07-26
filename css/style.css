@@ -1,0 +1,94 @@
+html,
+* {
+    margin: 0;
+}
+
+body {
+    background: #7EB672;
+    font-family: Arial;
+    text-align: center;
+}
+
+.container {
+    padding: 20px 60px;
+    height: 100%;
+}
+
+a {
+    color: #f4f4f4;
+}
+
+h1 {
+    color: #f4f4f4;
+}
+
+.hide {
+    display: none;
+}
+
+/* Grid */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.description-wrapper {
+    background: #ffffff;
+    float: left;
+    border-radius: 5px;
+}
+
+.member-description img {
+    max-width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.description-text {
+    font-size: 15px;
+    text-align: left;
+    padding: 20px;
+}
+
+.grid-container>div {
+    text-align: center;
+    font-size: 30px;
+}
+
+.member-button img {
+    max-width: 170px;
+}
+
+.member-button {
+    margin: 0px 20px 10px;
+}
+
+.active-member img,
+.member-button img:hover {
+    -webkit-box-shadow: 0px 0px 90px -35px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 90px -35px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 90px -35px rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+
+
+.member-button img {
+    border-radius: 5px;
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 99%;
+}
