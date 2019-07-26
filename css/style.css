@@ -20,6 +20,7 @@ a {
 
 h1 {
     color: #f4f4f4;
+    margin-bottom: 20px;
 }
 
 .hide {
@@ -45,6 +46,10 @@ h1 {
     border-radius: 5px;
 }
 
+.member-description {
+    max-width: 550px;
+}
+
 .member-description img {
     max-width: 100%;
     border-top-left-radius: 5px;
@@ -63,7 +68,7 @@ h1 {
 }
 
 .member-button img {
-    max-width: 170px;
+    max-width: 270px;
 }
 
 .member-button {
@@ -91,4 +96,10 @@ footer {
     bottom: 10px;
     text-align: center;
     width: 99%;
+}
+
+@media screen and (max-width: 1155px) {
+    .grid-container img {
+        max-width: 170px;
+    }
 }

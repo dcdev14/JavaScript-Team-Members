@@ -1,27 +1,37 @@
-const allMembers = document.querySelector(".member-description").children;
 const membersTrigger = document.querySelector(".grid-container").children;
 
-// Toggle effect 
+const allMembers = document.querySelector(".member-description").children;
+
+// Toggle functionality
 
 for (let i = 0; i < membersTrigger.length; i++) {
-  // Get index of clicked element
   membersTrigger[i].onclick = () => {
-    const index = [...membersTrigger[i].parentElement.children].indexOf(membersTrigger[i]);
+    const index = [...membersTrigger[i].parentElement.children].indexOf(
+      membersTrigger[i]
+    );
 
-    !allMembers[index].classList.add("hide");
+    for (element of allMembers) {
+      // to hide current element if another gets clicked
+      if (!element.classList.contains("hide")) element.classList.add("hide");
+    }
 
-    // Show clicked member
-    allMembers[index].classList.remove("hide");
+    for (element of membersTrigger) {
+      // to remove cut corners if another element gets clicked
+      if (element.classList.contains("active-member"))
+        element.classList.remove("active-member");
+    }
 
-    // Add active-member class to trigger
+    // Adding class for cut corners on active element
     membersTrigger[index].classList.add("active-member");
 
-    !membersTrigger[index].classList.remove("active-member");
-  }
+    allMembers[index].classList.remove("hide");
+  };
 }
 
 // Tilt effect
 
-$('.trigger-img').tilt({
+$(".trigger-img").tilt({
+  glare: true,
+  maxGlare: 0.1,
   scale: 1.1
-})
+});
